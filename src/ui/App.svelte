@@ -1,10 +1,14 @@
 <script>
-	export let name;
+	import GridUI from "./Grid.svelte"
+	import { Grid } from "../lib/Grid"
+
+	let grid = new Grid(10)
+	grid.seedCells(10)
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<GridUI grid={grid}></GridUI>
+	<button on:click={() => {grid.simulateGeneration(); grid = grid}}>Simulate Generation</button>
 </main>
 
 <style>

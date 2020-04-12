@@ -31,4 +31,8 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
+
+	h1 {
+		font-family: "Helvetica Neue", sans-serif;
+	}
 </style>

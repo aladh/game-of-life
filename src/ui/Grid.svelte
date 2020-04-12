@@ -18,7 +18,6 @@
         display: inline-grid;
         justify-items: center;
         align-items: center;
-        margin: 10px 60px 30px;
         border: 1px solid black;
     }
 
@@ -30,25 +29,10 @@
         width: 15px;
     }
 
-    @media (max-width: 1500px) {
-        .cell {
-            height: 50px;
-            width: 50px;
-        }
-
-        .container {
-            margin: 10px 30px 30px;
-        }
-    }
-
     @media (max-width: 550px) {
         .cell {
-            height: 35px;
-            width: 35px;
-        }
-
-        .container {
-            margin: 0 auto 30px;
+            height: 5px;
+            width: 5px;
         }
     }
 

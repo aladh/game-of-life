@@ -19,8 +19,11 @@ export class Grid {
   seedCells(num: number) {
     for (let i = 0; i < num; i++) {
       let index = Grid.getRandomInt(this._cells.length - 1)
+      let cell = this._cells[index]
 
-      this._cells[index].live()
+      if (cell.alive) continue
+
+      cell.live()
       this.updateNeighbors(index, true)
     }
   }

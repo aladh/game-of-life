@@ -26,8 +26,8 @@
         justify-self: stretch;
         align-self: stretch;
 
-        height: 60px;
-        width: 60px;
+        height: 15px;
+        width: 15px;
     }
 
     @media (max-width: 1500px) {

@@ -2,13 +2,28 @@
 	import GridUI from "./Grid.svelte"
 	import { Grid } from "../lib/Grid"
 
-	let grid = new Grid(10)
-	grid.seedCells(10)
+	let grid = new Grid(50)
+	grid.seedCells(500)
+
+	const numGenerations = 100
+
+	function sleep(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+	}
+
+	async function simulateGenerations(n) {
+		for (let i = 0; i < n; i++) {
+			grid.simulateGeneration()
+			grid = grid
+			await sleep(100);
+		}
+	}
 </script>
 
 <main>
-	<GridUI grid={grid}></GridUI>
-	<button on:click={() => {grid.simulateGeneration(); grid = grid}}>Simulate Generation</button>
+	<GridUI grid={grid} />
+	<br>
+	<button on:click={() => simulateGenerations(numGenerations)}>Simulate {numGenerations} generations</button>
 </main>
 
 <style>

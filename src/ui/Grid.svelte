@@ -22,7 +22,6 @@
     }
 
     .cell {
-        border: 1px solid darkgray;
         justify-self: stretch;
         align-self: stretch;
 
@@ -54,9 +53,11 @@
 
     .cell[data-alive = 'false'] {
         background-color: white;
+        border: 1px solid white;
     }
 
     .cell[data-alive = 'true'] {
         background-color: black;
+        border: 1px solid darkgray;
     }
 </style>

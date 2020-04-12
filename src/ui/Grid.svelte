@@ -19,6 +19,7 @@
         justify-items: center;
         align-items: center;
         margin: 10px 60px 30px;
+        border: 1px solid black;
     }
 
     .cell {

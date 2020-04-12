@@ -18,7 +18,7 @@
         display: inline-grid;
         justify-items: center;
         align-items: center;
-        border: 1px solid black;
+        border: 1px solid lightgrey;
     }
 
     .cell {
